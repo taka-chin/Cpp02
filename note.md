@@ -29,3 +29,6 @@ ClassName& operator=(const ClassName& other) {
 5. ムーブコンストラクター :c++11以降らしい
 
 6. ムーブ代入演算子 :同上
+
+## RAII
+ コンストラクタで必要なメモリを確保してデストラクターで解放すること
