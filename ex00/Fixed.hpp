@@ -3,8 +3,8 @@
 
 class Fixed {
  private:
-  int num;
-  static const int cnum;
+  int fixedPointNum;
+  static const int digits;
 
  public:
   Fixed();
