@@ -1,4 +1,4 @@
-#ifndef FIXED_HPP
+#fndef FIXED_HPP
 #define FIXED_HPP
 
 #include <string>
@@ -7,7 +7,6 @@ class Fixed {
        private:
   int fixedPointNum;
   static const int digits = 8;
-
 
        public:
 	Fixed();
