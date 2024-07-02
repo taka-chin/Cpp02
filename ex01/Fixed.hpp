@@ -8,6 +8,7 @@ class Fixed {
   int fixedPointNum;
   static const int digits = 8;
 
+
        public:
 	Fixed();
 	Fixed(const int inputNum);
