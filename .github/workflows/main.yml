@@ -4,11 +4,11 @@ on:
   push:
     paths:
       - '**/*.cpp'
-      - '**/*.h'
+      - '**/*.hpp'
   pull_request:
     paths:
       - '**/*.cpp'
-      - '**/*.h'
+      - '**/*.hpp'
 
 jobs:
   clang-format:
@@ -22,7 +22,7 @@ jobs:
       run: sudo apt-get install -y clang-format
 
     - name: Run clang-format
-      run: find . -name '*.cpp' -o -name '*.h' | xargs clang-format -i
+      run: find . -name '*.cpp' -o -name '*.hpp' | xargs clang-format -i
 
     - name: Commit changes
       run: |
