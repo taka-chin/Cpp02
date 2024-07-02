@@ -4,22 +4,22 @@
 #include <string>
 
 class Fixed {
-       private:
+private:
   int fixedPointNum;
   static const int digits = 8;
 
-       public:
-	Fixed();
-	Fixed(const int inputNum);
-	Fixed(const float inputNum);
-	~Fixed();
-	Fixed(const Fixed &f);
-	Fixed &operator=(const Fixed &f);
-	std::ostream &operator<<(std::ostream &output);
-	int getRawBits(void) const;
-	void setRawBits(int const raw);
-	float toFloat( void ) const;
-	int toInt( void ) const;
+public:
+  Fixed();
+  Fixed(const int inputNum);
+  Fixed(const float inputNum);
+  ~Fixed();
+  Fixed(const Fixed &f);
+  Fixed &operator=(const Fixed &f);
+  std::ostream &operator<<(std::ostream &output);
+  int getRawBits(void) const;
+  void setRawBits(int const raw);
+  float toFloat(void) const;
+  int toInt(void) const;
 };
 
 #endif
