@@ -42,7 +42,7 @@ void Fixed::setRawBits(int const raw) {
 
 float toFloat(void) const {
   int fixedPointNum = Fixed::getRawBits();
-  float ret = float(fixedPointNum / (1 << 8));
+  float ret = float(fixedPointNum / (1 << digits));
   return ret;
 }
 
