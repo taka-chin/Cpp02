@@ -15,11 +15,13 @@ public:
   ~Fixed();
   Fixed(const Fixed &f);
   Fixed &operator=(const Fixed &f);
-  std::ostream &operator<<(std::ostream &output);
   int getRawBits(void) const;
   void setRawBits(int const raw);
   float toFloat(void) const;
   int toInt(void) const;
 };
-
+/* Fixed() << test; */
+/* Fixed().operator<<(test); */
+/* std::cerr << Fixed() */
+std::ostream &operator<<(std::ostream &output,const Fixed &f);
 #endif

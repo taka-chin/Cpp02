@@ -8,12 +8,12 @@ Fixed::Fixed() : fixedPointNum(0) {
 }
 
 Fixed::Fixed(const int inputNum) {
-  std::cout << "int constructor called" << std::endl;
+  std::cout << "Int constructor called" << std::endl;
   fixedPointNum = inputNum << digits;
 }
 
 Fixed::Fixed(const float inputNum) {
-  std::cout << "float constructor called" << std::endl;
+  std::cout << "Float constructor called" << std::endl;
   fixedPointNum = roundf(inputNum * (1 << digits));
 }
 
@@ -31,7 +31,7 @@ Fixed &Fixed::operator=(const Fixed &f) {
 }
 
 int Fixed::getRawBits(void) const {
-  std::cout << "getRawBits member function called" << std::endl;
+  /* std::cout << "getRawBits member function called" << std::endl; */
   return this->fixedPointNum;
 }
 
@@ -40,19 +40,15 @@ void Fixed::setRawBits(int const raw) {
   this->fixedPointNum = raw;
 }
 
-float toFloat(void) const {
-  int fixedPointNum = Fixed::getRawBits();
-  float ret = float(fixedPointNum / (1 << digits));
-  return ret;
+float Fixed::toFloat(void) const {
+  return static_cast<float>(fixedPointNum )/ (1 << digits);
 }
 
-int toInt(void) const {
-  int fixedPointNum = Fixed::getRawBits();
-  int ret = fixedPointNum >> digits;
-  return ret;
+int Fixed::toInt(void) const {
+  return fixedPointNum >> digits;
 }
 
-std::ostream &operator<<(std::ostream &output) {
-  output << Fixed::toFloat();
+std::ostream &operator<<(std::ostream &output,const Fixed &f) {
+  output << f.toFloat();
   return output;
 }
