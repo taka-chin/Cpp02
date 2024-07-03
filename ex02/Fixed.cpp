@@ -75,7 +75,7 @@ Fixed Fixed::operator*(const Fixed &f) {
 Fixed Fixed::operator/(const Fixed &f) {
   std::cout << "division assignment operator called" << std::endl;
   Fixed ret;
-  ret.setRawBits((this->getRawBits() << digits )/ f.getRawBits()) ;
+  ret.setRawBits((this->getRawBits() << digits) / f.getRawBits());
   return ret;
 }
 
