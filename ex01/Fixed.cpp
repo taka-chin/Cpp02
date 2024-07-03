@@ -41,14 +41,12 @@ void Fixed::setRawBits(int const raw) {
 }
 
 float Fixed::toFloat(void) const {
-  return static_cast<float>(fixedPointNum )/ (1 << digits);
+  return static_cast<float>(fixedPointNum) / (1 << digits);
 }
 
-int Fixed::toInt(void) const {
-  return fixedPointNum >> digits;
-}
+int Fixed::toInt(void) const { return fixedPointNum >> digits; }
 
-std::ostream &operator<<(std::ostream &output,const Fixed &f) {
+std::ostream &operator<<(std::ostream &output, const Fixed &f) {
   output << f.toFloat();
   return output;
 }

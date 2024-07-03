@@ -23,5 +23,5 @@ public:
 /* Fixed() << test; */
 /* Fixed().operator<<(test); */
 /* std::cerr << Fixed() */
-std::ostream &operator<<(std::ostream &output,const Fixed &f);
+std::ostream &operator<<(std::ostream &output, const Fixed &f);
 #endif
