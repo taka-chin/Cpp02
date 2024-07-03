@@ -41,54 +41,52 @@ void Fixed::setRawBits(int const raw) {
 }
 
 float Fixed::toFloat(void) const {
-  return static_cast<float>(fixedPointNum )/ (1 << digits);
+  return static_cast<float>(fixedPointNum) / (1 << digits);
 }
 
-int Fixed::toInt(void) const {
-  return fixedPointNum >> digits;
-}
+int Fixed::toInt(void) const { return fixedPointNum >> digits; }
 
-std::ostream &operator<<(std::ostream &output,const Fixed &f) {
+std::ostream &operator<<(std::ostream &output, const Fixed &f) {
   output << f.toFloat();
   return output;
 }
 
-Fixed operator+(const Fixed &f){
+Fixed operator+(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-Fixed operator-(const Fixed &f){
+Fixed operator-(const Fixed &f) {
   std::cout << "minus assignment operator called" << std::endl;
 }
 
-Fixed operator*(const Fixed &f){
+Fixed operator*(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-Fixed operator/(const Fixed &f){
+Fixed operator/(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-bool operator>(const Fixed &f){
+bool operator>(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-bool operator<(const Fixed &f){
+bool operator<(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-bool operator>=(const Fixed &f){
+bool operator>=(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-bool operator<=(const Fixed &f){
+bool operator<=(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-bool operator==(const Fixed &f){
+bool operator==(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
 }
 
-bool operator!=(const Fixed &f){
+bool operator!=(const Fixed &f) {
   std::cout << " assignment operator called" << std::endl;
 }
