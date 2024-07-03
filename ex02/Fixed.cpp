@@ -51,42 +51,54 @@ std::ostream &operator<<(std::ostream &output, const Fixed &f) {
   return output;
 }
 
-Fixed operator+(const Fixed &f) {
+Fixed Fixed::operator+(const Fixed &f) {
   std::cout << "plus assignment operator called" << std::endl;
+  Fixed ret;
+  ret.setRawBits(this->getRawBits() + f.getRawBits());
+  return ret;
 }
 
-Fixed operator-(const Fixed &f) {
+Fixed Fixed::operator-(const Fixed &f) {
   std::cout << "minus assignment operator called" << std::endl;
+  Fixed ret;
+  ret.setRawBits(this->getRawBits() - f.getRawBits());
+  return ret;
 }
 
-Fixed operator*(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
+Fixed Fixed::operator*(const Fixed &f) {
+  std::cout << "mlutiplication assignment operator called" << std::endl;
+  Fixed ret;
+  ret.setRawBits((this->getRawBits() * f.getRawBits()) >> digits);
+  return ret;
 }
 
-Fixed operator/(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
+Fixed Fixed::operator/(const Fixed &f) {
+  std::cout << "division assignment operator called" << std::endl;
+  Fixed ret;
+  ret.setRawBits((this->getRawBits() << digits )/ f.getRawBits()) ;
+  return ret;
 }
 
-bool operator>(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
-}
+/* bool operator>(const Fixed &f) { */
+/*   std::cout << "plus assignment operator called" << std::endl; */
+/* } */
 
-bool operator<(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
-}
+/* bool operator<(const Fixed &f) { */
+/*   std::cout << "plus assignment operator called" << std::endl; */
+/* } */
 
-bool operator>=(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
-}
+/* bool operator>=(const Fixed &f) { */
+/*   std::cout << "plus assignment operator called" << std::endl; */
+/* } */
 
-bool operator<=(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
-}
+/* bool operator<=(const Fixed &f) { */
+/*   std::cout << "plus assignment operator called" << std::endl; */
+/* } */
 
-bool operator==(const Fixed &f) {
-  std::cout << "plus assignment operator called" << std::endl;
-}
+/* bool operator==(const Fixed &f) { */
+/*   std::cout << "plus assignment operator called" << std::endl; */
+/* } */
 
-bool operator!=(const Fixed &f) {
-  std::cout << " assignment operator called" << std::endl;
-}
+/* bool operator!=(const Fixed &f) { */
+/*   std::cout << " assignment operator called" << std::endl; */
+/* } */

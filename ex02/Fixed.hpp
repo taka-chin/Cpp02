@@ -15,16 +15,16 @@ public:
   ~Fixed();
   Fixed(const Fixed &f);
   Fixed &operator=(const Fixed &f);
-  bool operator>(const Fixed &f);
-  bool operator<(const Fixed &f);
-  bool operator>=(const Fixed &f);
-  bool operator<=(const Fixed &f);
-  bool operator==(const Fixed &f);
-  bool operator!=(const Fixed &f);
   Fixed operator+(const Fixed &f);
   Fixed operator-(const Fixed &f);
   Fixed operator*(const Fixed &f);
   Fixed operator/(const Fixed &f);
+  /* bool operator>(const Fixed &f); */
+  /* bool operator<(const Fixed &f); */
+  /* bool operator>=(const Fixed &f); */
+  /* bool operator<=(const Fixed &f); */
+  /* bool operator==(const Fixed &f); */
+  /* bool operator!=(const Fixed &f); */
   static Fixed &min(Fixed &f1, Fixed &f2);
   static const Fixed &min(const Fixed &f1, const Fixed &f2);
   static Fixed &max(Fixed &f1, Fixed &f2);
