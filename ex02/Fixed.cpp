@@ -103,23 +103,18 @@ Fixed Fixed::operator/(const Fixed &f) {
 /*   std::cout << " assignment operator called" << std::endl; */
 /* } */
 
-Fixed & Fixed::min(Fixed &f1,Fixed &f2)
-{
-		return (f1.getRawBits() < f2.getRawBits()) ? f1 : f2;
+Fixed &Fixed::min(Fixed &f1, Fixed &f2) {
+  return (f1.getRawBits() < f2.getRawBits()) ? f1 : f2;
 }
 
-const Fixed & Fixed::min(const Fixed &f1,const Fixed &f2)
-{
-		return (f1.getRawBits() < f2.getRawBits()) ? f1 : f2;
-
+const Fixed &Fixed::min(const Fixed &f1, const Fixed &f2) {
+  return (f1.getRawBits() < f2.getRawBits()) ? f1 : f2;
 }
 
-Fixed & Fixed::max(Fixed &f1,Fixed &f2)
-{
-		return (f1.getRawBits() > f2.getRawBits()) ? f1 : f2;
+Fixed &Fixed::max(Fixed &f1, Fixed &f2) {
+  return (f1.getRawBits() > f2.getRawBits()) ? f1 : f2;
 }
 
-const Fixed & Fixed::max(const Fixed &f1,const Fixed &f2)
-{
-		return (f1.getRawBits() > f2.getRawBits()) ? f1 : f2;
+const Fixed &Fixed::max(const Fixed &f1, const Fixed &f2) {
+  return (f1.getRawBits() > f2.getRawBits()) ? f1 : f2;
 }
