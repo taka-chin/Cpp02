@@ -4,7 +4,7 @@
 class Fixed {
  private:
   int fixedPointNum;
-  static const int digits;
+  static const int digits = 8;
 
  public:
   Fixed();
