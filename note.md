@@ -62,3 +62,6 @@ return-type class-name::member-function-name(param...) const
 	function-body...
 }
 ```
+
+関数のオーバーロードで引数の違いと同様に関数がconstかどうかでメンバー関数のオーバーロードを定義できる
+どちらの関数が呼ばれるかはインスタンスがconstかどうかによる
