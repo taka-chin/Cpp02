@@ -90,7 +90,8 @@ bool Fixed::operator<(const Fixed &f) {
 }
 
 bool Fixed::operator>=(const Fixed &f) {
-  std::cout << "greater than or equal to assignment operator called" << std::endl;
+  std::cout << "greater than or equal to assignment operator called"
+            << std::endl;
   return (this->getRawBits() >= f.getRawBits());
 }
 
