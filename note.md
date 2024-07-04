@@ -67,6 +67,31 @@ return-type class-name::member-function-name(param...) const
 どちらの関数が呼ばれるかはインスタンスがconstかどうかによる
 
 ## 演算子オーバーロード
+
 ## thisポインタ
-## static
+メンバー関数はクラス内の他のメンバーを直接参照できますが、仮引数の名前もメンバー関数と同じ場合
+メンバー関数の中ではメンバーではなく仮引数を表すことになっている
+メンバー関数の中で仮引数やメンバーの名前に依存せずメンバーにアクセスするにはthisポインタを利用できます
+thisポインターにはそのメンバー関数呼び出しに使われたオブジェクトを指し示すポインターが格納されています
+thisポインター自体の値は変更できません
+thisポインターはコンパイラが自動で使えるように用意されているポインターなので宣言できません
+
+```
+class class-name
+{
+	int value;
+public:
+	return-type class-name::member-function-name(int value)
+	{
+		value = value;//引数のこと	
+		this->value = value;
+	}
+}
+```
+## staticクラスメンバー
+staticクラスメンバーは特定のインスタンスと結びつかないメンバー変数や関数
+### staticメンバー変数
+
+### staticメンバー関数
+
 ## 固定小数点
