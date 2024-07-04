@@ -110,28 +110,26 @@ bool Fixed::operator!=(const Fixed &f) {
   return (this->getRawBits() != f.getRawBits());
 }
 
-Fixed &Fixed::operator++(){
+Fixed &Fixed::operator++() {
   std::cout << "pre increment assignment operator called" << std::endl;
   this->fixedPointNum++;
   return (*this);
 }
 
-Fixed Fixed::operator++(int){
+Fixed Fixed::operator++(int) {
   std::cout << "post increment assignment operator called" << std::endl;
   Fixed tmp(*this);
   ++(*this);
   return (tmp);
 }
 
-Fixed &Fixed::operator--()
-{
+Fixed &Fixed::operator--() {
   std::cout << "pre decrement assignment operator called" << std::endl;
   this->fixedPointNum--;
   return (*this);
 }
 
-Fixed Fixed::operator--(int)
-{
+Fixed Fixed::operator--(int) {
   std::cout << "post decrement assignment operator called" << std::endl;
   Fixed tmp(*this);
   --(*this);
