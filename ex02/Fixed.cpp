@@ -79,29 +79,35 @@ Fixed Fixed::operator/(const Fixed &f) {
   return ret;
 }
 
-/* bool operator>(const Fixed &f) { */
-/*   std::cout << "plus assignment operator called" << std::endl; */
-/* } */
+bool Fixed::operator>(const Fixed &f) {
+  std::cout << "greater than assignment operator called" << std::endl;
+  return (this->getRawBits() > f.getRawBits());
+}
 
-/* bool operator<(const Fixed &f) { */
-/*   std::cout << "plus assignment operator called" << std::endl; */
-/* } */
+bool Fixed::operator<(const Fixed &f) {
+  std::cout << "less than assignment operator called" << std::endl;
+  return (this->getRawBits() < f.getRawBits());
+}
 
-/* bool operator>=(const Fixed &f) { */
-/*   std::cout << "plus assignment operator called" << std::endl; */
-/* } */
+bool Fixed::operator>=(const Fixed &f) {
+  std::cout << "greater than or equal to assignment operator called" << std::endl;
+  return (this->getRawBits() >= f.getRawBits());
+}
 
-/* bool operator<=(const Fixed &f) { */
-/*   std::cout << "plus assignment operator called" << std::endl; */
-/* } */
+bool Fixed::operator<=(const Fixed &f) {
+  std::cout << "less than or equal to assignment operator called" << std::endl;
+  return (this->getRawBits() <= f.getRawBits());
+}
 
-/* bool operator==(const Fixed &f) { */
-/*   std::cout << "plus assignment operator called" << std::endl; */
-/* } */
+bool Fixed::operator==(const Fixed &f) {
+  std::cout << "equality assignment operator called" << std::endl;
+  return (this->getRawBits() == f.getRawBits());
+}
 
-/* bool operator!=(const Fixed &f) { */
-/*   std::cout << " assignment operator called" << std::endl; */
-/* } */
+bool Fixed::operator!=(const Fixed &f) {
+  std::cout << "not equality assignment operator called" << std::endl;
+  return (this->getRawBits() != f.getRawBits());
+}
 
 Fixed &Fixed::min(Fixed &f1, Fixed &f2) {
   return (f1.getRawBits() < f2.getRawBits()) ? f1 : f2;
